@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<div lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <title>Go购数码首页</title>
+        <link rel="stylesheet" href="../public/css/reset.css" media="all">
+        <link rel="stylesheet" href="../public/css/index.css" media="all">
+        <script src="../public/js/jquery-1.12.4.js"></script>
+        <!-- bootstrap轮播 -->
+        <script src="../public/bootstrap-4.6.1-dist/jquery-3.5.1.slim.min.js"></script>
+        <script src="../public/bootstrap-4.6.1-dist/js/bootstrap.js"></script>
+        <link rel="stylesheet" href="../public/bootstrap-4.6.1-dist/css/bootstrap.css">
+        <script src="../public/js/index.js"></script>
+    </head>
+
+    <body>
+        <!--顶部导航栏-->
+        <div id="div1">
+            <div id="header">
+                <!--left-->
+                <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="z-index: 1000000000;">
+
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">荣光商城</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link ">数码中心</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link">协议规则</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link">资质认证</a>
+                            </li>
+                        </ul>
+                        <form class="form-inline my-2 my-lg-0 top-nav">
+                            <a href="./login.html">
+                                <li style="width: 70px;" id="userLogin">登录</li>
+                            </a>
+                            <!--注册-->
+                            <a href="./register.html">
+                                <li style="width: 70px;padding-left:15px ;margin-top: 1px;" id="userReg">注册</li>
+                            </a>
+                            <a href="#">
+                                <li style="width: 70px;margin-right: 50px;" id="phone"></li>
+                            </a>
+                        </form>
+                    </div>
+                </nav>
+                <div id="nav">
+                    <!--logo-->
+                    <div id="navlog">
+                        <a href="/">
+                            <img src="../public/img/logo.jpg" id="log" style="height: 40px;">
+                        </a>
+                    </div>
+                    <!--导航-->
+                    <div id="navbar">
+                        <ul class="ce">
+                            <a href="#" id="cec">
+                                <li class="outli" id="outlid1">电脑
+                                    <div class="navdiv" id="navdivid1">
+                                        <!-- 电脑分类导航商品渲染 -->
+                                        <ul>
+                                            <% computerList.forEach(function(value) { %>
+                                                <li class="inli">
+                                                    <a href="#">
+                                                        <img src="../public/img/product/<%=value.p_img1%>" /><br>
+                                                        <%= value.p_name %><br>
+                                                            <span>
+                                                                <%= value.p_price1 %>元起
+                                                            </span>
+                                                    </a>
+                                                </li>
+                                                <% }) %>
+                                        </ul>
+
+                                    </div>
+                                </li>
+                            </a>
+                            <a href="#" id="cec">
+                                <li class="outli" id="outlid2">手机
+                                    <div class="navdiv" id="navdivid2">
+                                        <!-- 手机分类导航商品渲染 -->
+                                        <ul>
+                                            <% phoneList.forEach(function(value) { %>
+                                                <li class="inli">
+                                                    <a href="#">
+                                                        <img src="../public/img/product/<%=value.p_img1%>" /><br>
+                                                        <%= value.p_name %><br>
+                                                            <span>
+                                                                <%= value.p_price1 %>元起
+                                                            </span>
+                                                    </a>
+                                                </li>
+                                                <% }) %>
+                                        </ul>
+
+                                    </div>
+                                </li>
+                            </a>
+                            <a href="#" id="cec">
+                                <li class="outli" id="outlid3">平板
+                                    <div class="navdiv" id="navdivid3">
+                                        <!-- 平板分类导航商品渲染 -->
+                                        <ul>
+                                            <% padList.forEach(function(value) { %>
+                                                <li class="inli">
+                                                    <a href="#">
+                                                        <img src="../public/img/product/<%=value.p_img1%>" /><br>
+                                                        <%= value.p_name %><br>
+                                                            <span>
+                                                                <%= value.p_price1 %>元起
+                                                            </span>
+                                                    </a>
+                                                </li>
+                                                <% }) %>
+                                        </ul>
+
+                                    </div>
+                                </li>
+                            </a>
+                            <a href="#" id="cec">
+                                <li class="outli" id="outlid4">耳机
+                                    <div class="navdiv" id="navdivid4">
+                                        <!-- 耳机分类导航商品渲染 -->
+                                        <ul>
+                                            <% earphoneList.forEach(function(value) { %>
+                                                <li class="inli">
+                                                    <a href="#">
+                                                        <img src="../public/img/product/<%=value.p_img1%>" /><br>
+                                                        <%= value.p_name %><br>
+                                                            <span>
+                                                                <%= value.p_price1 %>元起
+                                                            </span>
+                                                    </a>
+                                                </li>
+                                                <% }) %>
+                                        </ul>
+
+                                    </div>
+                                </li>
+                            </a>
+
+                        </ul>
+                    </div>
+                    <div class="search">
+                        <input type="text" style="width: 70%; float: left;">
+                        <button style="width: 30%;  border: 0; height: 100%; border-left: 1px solid gray;">搜索</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="banner">
+            <div class="banner-select">
+                <div>手机
+                    <ul class="two-one">
+                        <li style="margin-top: 9px;"><img src="../public/imgg/1.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;Rongguang&nbsp;RG系列
+                        </li>
+                        <li><img src="../public/imgg/2.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;Rongugang&nbsp;数字系列
+                        </li>
+                        <li><img src="../public/imgg/3.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;Rongugang&nbsp;GiVi系列
+                        </li>
+                        <li><img src="../public/imgg/4.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;Rongugang&nbsp;K系列
+                        </li>
+                        <li><img src="../public/imgg/5.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;Rongugang&nbsp;note系列
+                        </li>
+                        <li><img src="../public/imgg/6.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;Rongugang&nbsp;Pro系列
+                        </li>
+
+                    </ul>
+                </div>
+                <div>电视
+                    <ul class="two-one">
+                        <li style="margin-top: 9px;"><img src="../public/imgg/7.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;荣光电视&nbsp;大师系列
+                        </li>
+                        <li><img src="../public/imgg/8.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;荣光电视&nbsp;S系列
+                        </li>
+                        <li><img src="../public/imgg/9.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;荣光电视&nbsp;EA系列
+                        </li>
+                        <li><img src="../public/imgg/10.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;荣光电视&nbsp;MAX系列
+                        </li>
+                        <li><img src="../public/imgg/11.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;荣光电视&nbsp;A系列
+                        </li>
+                        <li><img src="../public/imgg/12.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;荣光电视&nbsp;Pro系列
+                        </li>
+
+
+                    </ul>
+
+                </div>
+                <div>家电
+                    <ul class="two-one">
+                        <li style="margin-top: 9px;"><img src="../public/imgg/13.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;壁挂空调
+                        </li>
+                        <li><img src="../public/imgg/14.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;立式空调
+                        </li>
+                        <li><img src="../public/imgg/15.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;中央空调
+                        </li>
+                        <li><img src="../public/imgg/16.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;冰箱
+                        </li>
+                        <li><img src="../public/imgg/17.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;滚筒洗衣机
+                        </li>
+                        <li><img src="../public/imgg/18.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;波轮洗衣机
+                        </li>
+
+                    </ul>
+
+
+                </div>
+                <div>平板
+                    <ul class="two-one">
+                        <li style="margin-top: 9px;"><img src="../public/imgg/19.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;Rongguang&nbsp;Pad&nbsp;SE
+                        </li>
+                        <li><img src="../public/imgg/20.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;Rongguang1&nbsp;Pad&nbsp;MAx
+                        </li>
+                        <li><img src="../public/imgg/21.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;Rongguang1&nbsp;Pad&nbsp;Pro
+                        </li>
+                        <li><img src="../public/imgg/22.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;Rongguang1&nbsp;Pad&nbsp;6
+                        </li>
+                        <li><img src="../public/imgg/23.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;Rongguang1&nbsp;Pad
+                        </li>
+                        <li><img src="../public/imgg/24.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;荣光平板6&nbsp;Pro
+                        </li>
+
+                    </ul>
+
+                </div>
+                <div>配饰
+                    <ul class="two-one">
+                        <li style="margin-top: 9px;"><img src="../public/imgg/25.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;荣光手环&nbsp;Pro&nbsp;定制版
+                        </li>
+                        <li><img src="../public/imgg/26.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;Rongguang1&nbsp;Watch&nbsp;6
+                        </li>
+                        <li><img src="../public/imgg/27.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;Rongguang1&nbsp;Watch&nbsp;S2
+                        </li>
+                        <li><img src="../public/imgg/28.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;荣光腕部心电血压记录仪
+                        </li>
+                        <li><img src="../public/imgg/29.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;荣光手环8&nbsp;Pro
+                        </li>
+                        <li><img src="../public/imgg/30.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;Rongguang&nbsp;Watch&nbsp;青春版
+                        </li>
+
+                    </ul>
+
+                </div>
+                <div>耳机
+                    <ul class="two-one">
+                        <li style="margin-top: 9px;"><img src="../public/imgg/31.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;Rongguang&nbsp;Buds&nbsp;SE
+                        </li>
+                        <li><img src="../public/imgg/32.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;Rongguang&nbsp;Buds&nbsp;MAx
+                        </li>
+                        <li><img src="../public/imgg/33.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;Rongguang&nbsp;Buds&nbsp;Pro
+                        </li>
+                        <li><img src="../public/imgg/34.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;第四代全新
+                        </li>
+                        <li><img src="../public/imgg/35.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;荣光耳机&nbsp;活力版
+                        </li>
+                        <li><img src="../public/imgg/36.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;无损降噪o
+                        </li>
+
+                    </ul>
+
+                </div>
+                <div>儿童专区
+                    <ul class="two-one">
+                        <li style="margin-top: 9px;"><img src="../public/imgg/37.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;洗手机
+                        </li>
+                        <li><img src="../public/imgg/38.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;剃须刀
+                        </li>
+                        <li><img src="../public/imgg/39.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;修剪器
+                        </li>
+                        <li><img src="../public/imgg/40.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;牙刷
+                        </li>
+                        <li><img src="../public/imgg/41.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;吹风机
+                        </li>
+                        <li><img src="../public/imgg/42.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;体重称
+                        </li>
+
+                    </ul>
+
+                </div>
+                <div>生活物品
+                    <ul class="two-one">
+                        <li style="margin-top: 9px;"><img src="../public/imgg/43.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;小背包
+                        </li>
+                        <li><img src="../public/imgg/44.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;双肩包
+                        </li>
+                        <li><img src="../public/imgg/45.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;胸包
+                        </li>
+                        <li><img src="../public/imgg/46.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;旅行箱
+                        </li>
+                        <li><img src="../public/imgg/47.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;收纳袋
+                        </li>
+                        <li><img src="../public/imgg/48.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;运动鞋
+                        </li>
+
+                    </ul>
+
+                </div>
+                <div>荣光路由器
+                    <ul class="two-one">
+                        <li style="margin-top: 9px;"><img src="../public/imgg/49.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;仿生四足机器人
+                        </li>
+                        <li><img src="../public/imgg/50.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;无损麦克风
+                        </li>
+                        <li><img src="../public/imgg/51.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;打印机
+                        </li>
+                        <li><img src="../public/imgg/52.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;荣华路由器
+                        </li>
+                        <li><img src="../public/imgg/53.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;Rongguang路由器
+                        </li>
+                        <li><img src="../public/imgg/54.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;智能家庭
+                        </li>
+
+                    </ul>
+
+                </div>
+                <div>电源
+                    <ul class="two-one">
+                        <li style="margin-top: 9px;"><img src="../public/imgg/55.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;插座插排
+                        </li>
+                        <li><img src="../public/imgg/56.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;移动电源
+                        </li>
+                        <li><img src="../public/imgg/57.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;数据线
+                        </li>
+                        <li><img src="../public/imgg/58.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;平板配件
+                        </li>
+                        <li><img src="../public/imgg/59.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;充电器
+                        </li>
+                        <li><img src="../public/imgg/60.png" alt=""
+                                style="width: 40px; height: 40px; display: block; float: left; margin-left: 20px;">&nbsp;&nbsp;&nbsp;电池
+                        </li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+            <!-- 轮播图 -->
+            <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel"
+                style="float: right; width: 80%; height: 100%;">
+
+                <ol class="carousel-indicators">
+                    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+                </ol>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="../public/bootstrap-4.6.1-dist/img/1.jpg" class="d-block w-100" alt="..."
+                            style="height:500px;">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./public/bootstrap-4.6.1-dist/img/2.jpg" class="d-block w-100" alt="..."
+                            style="height:500px;">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./public/bootstrap-4.6.1-dist/img/3.jpg" class="d-block w-100" alt="..."
+                            style="height:500px;">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./public/bootstrap-4.6.1-dist/img/4.jpg" class="d-block w-100" alt="..."
+                            style="height:500px;">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-target="#carouselExampleIndicators"
+                    data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-target="#carouselExampleIndicators"
+                    data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </button>
+
+            </div>
+
+        </div>
+        <div class="container" style="margin-left: 13.2%;">
+            <div class="row">
+                <div class="col-md-12" style="font-size: 25px; height: 40px; padding-left: 5px;">超值优惠</div>
+                <div class="col-md-12 ">
+                    <div class="row" style="width: 1225px;">
+                        <!-- 所有商品展示 -->
+                        <% productList.forEach(function(value) { %>
+                            <div class="col-md-3 row border m-1 pho" style="max-width: 24%;">
+                                <div class="col-md-12">
+                                    <img src="../public/img/product/<%=value.p_img1%>" class="img-fluid" alt="">
+                                </div>
+                                <div class="col-md-12">
+                                    <p style="margin-top: 20px; font-weight: bold;">
+                                        <%= value.p_name %>
+                                    </p>
+                                </div>
+                                <div class="col-md-12"> <span style="margin-top: 10px;">
+                                        <%= value.p_version1 %> / <%= value.p_version2 %>
+                                    </span></div>
+                                <div class="col-md-12 pla"> <span style="margin-top: 10px;">
+                                        <%= value.p_color1 %> / <%= value.p_color2 %>
+                                    </span></div>
+                                <div class="col-md-12">
+                                    <p style="font-size: 12px; color: #999999; margin-top: 30px;">
+                                        RMB <span style="color: #c91111; display: inline; font-weight: bold;">
+                                            <%= value.p_price1 %>
+                                        </span>
+                                    </p>
+                                </div>
+                            </div>
+                            <% }) %>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
+<div class="container-fluid" style="background-color: #353a41; height: 250px; ">
+    <div class="w-25 p-3" style="margin: 0 auto; margin-top: 30px;">
+        <h2 style="text-align: center; color: #dfdbde; margin-top: 20px;" class="font-weight-bolder">联系我们</h2>
+    </div>
+    <h3 style="text-align: center; color: #e5e6ea; font-size: 25px; margin-top: 40px;">企业培训 | 合作事宜 | 版权投诉</h3>
+    <h3 style="text-align: center; color: #e5e6ea; font-size: 25px;">川ICP 备12345678.&copy; 2019-2025
+        rongguangshangcheng.Powered by 商务.</h3>
+</div>
+
+
+</body>
+
+<script>
+    if (sessionStorage.getItem('phone') !== null) {
+        document.getElementById('phone').style.display = 'block';
+        document.getElementById('phone').innerText = '欢迎您!';
+        document.getElementById('userLogin').style.display = 'none';
+        document.getElementById('userReg').style.display = 'none';
+    }
+</script>
+
+
+</html>
